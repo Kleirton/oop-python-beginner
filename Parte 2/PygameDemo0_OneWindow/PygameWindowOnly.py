@@ -1,3 +1,5 @@
+# 0 - Pygame Demo 0, apenas uma janela.
+
 # 1 - Importando os Pacotes
 import pygame
 from pygame.locals import *
@@ -15,7 +17,7 @@ pygame.init()
 window = pygame.display.set_mode((largura_janela, altura_janela))
 clock = pygame.time.Clock()
 
-# 4 - Carregand recursos (assets)
+# 4 - Carregando recursos (assets)
 
 # 5 - Iniciando variáveis
 
@@ -35,12 +37,11 @@ while True:
     # 9 - Limpar a janela
 
     window.fill(preto)
-
     # 10 - Desenhando todos os elementos da janela
 
     # 11 - Atulziando a janela
 
     pygame.display.update()
 
-    # 12 - Diminua um pouco o ritmo
+    # 12 - Desacelerando um pouco as coisas.
     clock.tick(quadros_por_segundo)
