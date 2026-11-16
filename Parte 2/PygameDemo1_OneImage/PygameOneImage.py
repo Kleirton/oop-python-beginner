@@ -8,16 +8,11 @@ from pathlib import Path
 
 # 2 - Definindo as cosntantes
 
+dicBase = Path(__file__).resolve().parent
 preto = (0, 0, 0)
 largura_janela = 640
 altura_janela = 480
 qps = 30
-
-caminho = Path(__file__).resolve().parent
-
-# Contruindo uma camiho para o arquivo da bola na pasta imagens
-
-camihhoparaBola = caminho + 'imagens/bola.png'
 
 # 3 - Inicializando o ambiente pygame
 
@@ -27,7 +22,7 @@ clock = pygame.time.Clock()
 
 # 4 - Carregando recursos (assets)
 
-imagemBola = pygame.image.load('/imagens/bola.png')
+imagemBola = pygame.image.load(f'{dicBase}/imagens/bola.png')
 
 # 5 - Variáveis de inicilização
 
@@ -38,7 +33,7 @@ while True:
     for evento in pygame.event.get():
         if evento.type == pygame.QUIT:
             pygame.quit()
-            sys.quit()
+            sys.exit()
     
     # 8 - Fazendo qualquer coisa por quadro.
 
@@ -47,7 +42,7 @@ while True:
     janela.fill(preto)
 
     # 10 - Desenhando todos os elemtnso da janela. 
-
+    ## Desenhando a bola na posição 100 no eixo x e 200 abaixo no y
     janela.blit(imagemBola, (100, 200))
 
     # Atulizando a janela
@@ -56,4 +51,4 @@ while True:
 
     # 12 - Desacelerando um pouco as coisas.
 
-    clock.tick(qps)
+    clock.tick(qps) # Fazendo o pygame esperar
