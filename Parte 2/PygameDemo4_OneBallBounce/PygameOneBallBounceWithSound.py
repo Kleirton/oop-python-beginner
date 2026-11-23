@@ -24,6 +24,8 @@ clock = pygame.time.Clock()
 
 imagemBola = pygame.image.load(f'{dirBase}/imagens/bola.png')
 boingSom = pygame.mixer.Sound(f'{dirBase}/sons/boing.wav')
+pygame.mixer.music.load(f'{dirBase}/sons/background.mp3')
+pygame.mixer.music.play(-1, 0.0)
 
 # 5 - Carregando variáveis
 
