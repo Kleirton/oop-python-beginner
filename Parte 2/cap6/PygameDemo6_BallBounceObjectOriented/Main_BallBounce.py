@@ -39,18 +39,18 @@ while True:
     # 8 - Fazendo coisas por quadro
 
     aBola.atulizar()
-
+    
     # 9 - Limpando a janela antes desenhar algo de novo
 
     janela.fill(preto)
 
     # 10 - Desenhando elementos na tela
 
-    aBola.desenhar()
-
+    aBola.desenhar() # Falando para desenha a bola na janela
+ 
     # 11 - atulizando a janela
 
-    pygame.display.update()
+    pygame.display.update() 
 
     # 12 - Desacelerando as coisas
 
